@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- <input type="text" maxlength="6"> -->
+        <!-- maxlength : 최대길이 -->
+
+        <input type="number" max="8" min = "4">
+        <!-- 숫자가 아니면 쓸 수 없게 한다, value="1234"로 초기값을 만든다. 
+            원래는 추가가 되지만 readonly(불린)을 넣으면 읽기 전용이고 
+            disabled(불린)을 넣으면 focus자체도 안되고 값만 남아있다
+            placeholder="숫자를 입력하세요"는 아무것도 입력하기 전에 적혀있는 내용 
+            max, min = "4" : 최소값, 최대값을 (동시에도) 설정할 수 있다
+            step = "4": 증가 시 4씩 증가, 감소 시 4씩 감소-->
+
+        <input type = "checkbox" checked> 
+        <!-- 체크가 안되어 있는 상태가 기본상태. checked를 하면 기본값은 체크가 되어 있는 상태가 된다 -->
+        <input type = "file" multiple>
+        <!-- <파일을 선택할 수 있는 양식이 나온다>  -->
+        <!-- 그냥 설정하면 파일을 하나만 받을 수 있기 때문에 multiple속성을 이용하면 여러 개를 입력받을 수 있다 -->
+        <form action="/login" method="GET">
+            <input type="email" name = "id">
+            <input type="password" name = "pw">
+            <!-- name속성이 있어야 GET method로 GET요청할 때 내용이 url에 들어간다 id=입력한 email, pw=입력한 pw -->
+            <input type="submit" value="로그인">
+        </form>
+        <!-- submit이라는 기능을 한다 -->
+
+        <form action = "/login">
+            <input type= "image" src="경로" alt="대체 텍스트">
+            <!-- input type="image"는 삽입된 이미지를 제출 버튼으로 활용해서 클릭할 수 있다 -->
+        </form>
+
+        <input type = "radio" name = "radio1">
+        <input type = "radio" name = "radio1" checked>
+        <input type = "radio" name = "radio1">
+        <!-- checked는 기본적으로 선택되어 있도록 한다 -->
+        <!-- 기본적으로 해제가 되지 않는다. 그러므로 하나보다 여러개를 만드는 것이 일반적 -->
+        <!-- 여러개 만들고 같은 name으로 통일을 시킨다. 그러면 하나의 버튼만 선택을 할 수 있게 된다(하나를 선택하면 다른 버튼이 선택 취소된다) -->
+
+    <form action = "/login" id="login-form"> </form> 
+    <input type="text" form = "login-form">
+    <!-- input태그가 form 밖에 있어도 form속성을 통해 연결되어 있다 -->
+
+    <form action="/login">
+        <input type="text" name = "id">
+        <input type="password" name = "pw">
+        <!-- name속성이 있어야 GET method로 GET요청할 때 내용이 url에 들어간다 id=입력한 email, pw=입력한 pw -->
+        <input type="submit" value="로그인">
+        <input type="reset" value="초기화">
+        <!-- value는 버튼에 적혀 있는 값. 초기화 버튼: 초기화가 포함되어져 있는 양식만 초기화 : 즉 form만! -->
+    </form>
+    <input type = "text">
+    <!-- 초기화 버튼의 영향을 받지 않는다 -->
+</body>
+</html>

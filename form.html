@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/login"></form>
+        <!--action: form태그 안 내용을 action에 있는 주소로 제출-->
+        <!-- http://127.0.0.1:5500/login?email=kwaknicky%40naver.com&password=1234 -->
+        <!--get: 이렇게 /login주소와 email, password 이름이 추가된 url이 생긴다 -->
+        <!-- cannot get이라는 페이지가 뜬다: GET이라는 method가 기본값  -->
+        <!-- post: POST방식으로 전송하면 위에  email, password 이름이 추가된 url이 생기지 않는다 -->
+        <!-- autocomplete = "off" 기본값은 on인데 off로 하면 자동완성이 되지 않는다 -->
+        <!-- novalidate: type가 email, password인데도 양식을 검사하지 않아서 @이 없어도 [유효성 검사] 넘어간다 -->
+        <!-- target = "_self"(기본값) "_blank"(다른 페이지) -->
+        <input type="email" name = "email"> 
+        <!-- input태그의 속성. type는 어떤 종류의 정보를 입력 받을 것인지 알려준다. 여기서 type=email로 해서 @가 없으면 입력받지 않는다 -->
+        <!-- 브라우저가 받는 정보가 email이라는 것을 알 수 있게 이름을 name으로 붙여준다  -->
+        <input type="password" name = "password">
+        <button type="submit">로그인</button>
+        <!-- submit과 관련된 일을 한다는 점에서 type을 submit으로 정해준다 -->
+
+    </form> 
+    
+</body>
+</html>
